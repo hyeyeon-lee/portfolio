@@ -135,6 +135,13 @@ table {
   --color-black: #000000;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
 .flex {
   display: flex !important;
 }

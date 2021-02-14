@@ -7,6 +7,13 @@
   color: var(--color-white);
   width: 100vw;
 }
+.navbar {
+  position: fixed;
+  background-color: rgb(147, 149, 151);
+  width: 100%;
+  font-family: "Ubuntu", sans-serif;
+}
+
 .header .inner {
   margin: 0 auto;
   width: 80%;
@@ -18,13 +25,12 @@
   padding: 20px 20px;
   cursor: pointer;
 }
-
-a:visited {
+.navbar .menu li a {
   color: var(--color-white);
 }
 
-a {
-  text-decoration: none;
+a:visited {
+  color: var(--color-white);
 }
 
 .header .menu li:hover {
