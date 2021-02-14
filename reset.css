@@ -127,3 +127,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* custom */
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+}
+
+.flex {
+  display: flex !important;
+}
+
+.text-center {
+  text-align: center impo !important;
+}

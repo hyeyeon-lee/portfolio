@@ -1,19 +1,30 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
 .header {
-  background-color: #0f4c81;
-  color: white;
+  background-color: rgb(147, 149, 151);
+  color: var(--color-white);
   width: 100vw;
 }
 .header .inner {
   margin: 0 auto;
   width: 80%;
-  display: flex;
   justify-content: space-between;
 }
 .header .menu li,
-.header .logo i {
+.header .logo a {
   display: inline-block;
   padding: 20px 20px;
   cursor: pointer;
+}
+
+a:visited {
+  color: var(--color-white);
+}
+
+a {
+  text-decoration: none;
 }
 
 .header .menu li:hover {
@@ -24,6 +35,15 @@
 main {
   background-color: #949398;
 }
+
+main .section {
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 footer {
   background-color: aquamarine;
   width: 100%;
@@ -31,7 +51,7 @@ footer {
 }
 
 #home {
-  background-color: rgb(255, 148, 148);
+  background-color: rgb(245, 223, 77);
   height: 300px;
 }
 #about {
@@ -50,17 +70,21 @@ footer {
 @media screen and (max-width: 689px) {
   .header .inner,
   .header .menu li {
-    display: block;
+    display: block !important;
     width: 100%;
     text-align: center;
   }
 
   .header .logo {
-    background-color: white;
-    color: black;
+    background-color: var(--color-white);
+    color: var(--color-black);
   }
 
   .header .menu li {
     padding: 30px 0;
+  }
+
+  a:visited {
+    color: var(--color-black);
   }
 }
