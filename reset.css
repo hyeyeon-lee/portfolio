@@ -146,6 +146,23 @@ table {
   display: flex !important;
 }
 
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
 .text-center {
   text-align: center impo !important;
+}
+
+.text-1 {
+  font-size: 75px;
+  font-weight: 600;
+}
+.text-2 {
+  font-size: 40px;
+}
+.text-3 {
+  font-size: 27px;
 }

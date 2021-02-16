@@ -2,44 +2,44 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
 
-.header {
-  background-color: rgb(147, 149, 151);
-  color: var(--color-white);
-  width: 100vw;
-}
+/* navbar */
 .navbar {
   position: fixed;
-  background-color: rgb(147, 149, 151);
+  /*  background-color: rgb(147, 149, 151); */
   width: 100%;
   font-family: "Ubuntu", sans-serif;
+  padding: 30px 0;
 }
 
-.header .inner {
-  margin: 0 auto;
-  width: 80%;
+.navbar .logo a {
+  color: var(--color-white);
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.navbar .logo a span {
+  color: yellow;
+}
+
+.navbar .max-width {
   justify-content: space-between;
+  align-items: center;
 }
-.header .menu li,
-.header .logo a {
+
+.navbar .menu li {
   display: inline-block;
-  padding: 20px 20px;
-  cursor: pointer;
 }
+
 .navbar .menu li a {
   color: var(--color-white);
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
 }
 
-a:visited {
-  color: var(--color-white);
-}
-
-.header .menu li:hover {
+.navbar .menu li a:hover {
   color: yellow;
-  background-color: grey;
-}
-
-main {
-  background-color: #949398;
 }
 
 main .section {
@@ -57,9 +57,27 @@ footer {
 }
 
 #home {
-  background-color: rgb(245, 223, 77);
-  height: 300px;
+  background: url("https://cdn.pixabay.com/photo/2021/02/06/14/24/lavanttal-5988332_960_720.jpg")
+    no-repeat center;
+  height: 100vh;
+  background-size: cover;
+  font-family: "Ubuntu", sans-serif;
+  min-height: 500px;
 }
+
+#home .max-width {
+  margin: auto 0 auto 40px;
+}
+
+#home .home-content p.text-2,
+#home .home-content p.text-3 {
+  margin: 8px 0;
+}
+#home .home-content p.text-2 span {
+  color: yellow;
+  font-weight: 500;
+}
+
 #about {
   background-color: rgb(217, 152, 255);
   height: 300px;
