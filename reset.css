@@ -155,14 +155,3 @@ table {
 .text-center {
   text-align: center !important;
 }
-
-.text-1 {
-  font-size: 75px;
-  font-weight: 600;
-}
-.text-2 {
-  font-size: 40px;
-}
-.text-3 {
-  font-size: 27px;
-}
