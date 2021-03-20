@@ -2,6 +2,12 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
 
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-theme-main: #f9d142;
+  --color-theme-sub: #292826;
+}
 /* navbar */
 .navbar {
   position: fixed;
@@ -15,7 +21,7 @@
 
 .navbar.sticky {
   padding: 15px 0;
-  background-color: yellow;
+  background-color: var(--color-theme-main);
 }
 
 .navbar .logo a {
@@ -25,11 +31,11 @@
 }
 
 .navbar .logo a span {
-  color: yellow;
+  color: var(--color-theme-main);
 }
 
 .navbar.sticky .logo a span {
-  color: #fff;
+  color: var(--color-white);
 }
 
 .navbar .max-width {
@@ -50,16 +56,16 @@
 }
 
 .navbar .menu li a:hover {
-  color: yellow;
+  color: var(--color-theme-main);
 }
 
 .navbar.sticky .menu li a:hover {
-  color: #fff;
+  color: var(--color-white);
 }
 
 /* menu button */
 .menu-btn {
-  color: #fff;
+  color: var(--color-white);
   font-size: 23px;
   cursor: pointer;
   display: none;
@@ -110,24 +116,24 @@ footer {
   margin: 8px 0;
 }
 #home .home-content p.text-2 span {
-  color: yellow;
+  color: var(--color-theme-main);
   font-weight: 500;
 }
 
 #home .home-content a {
   display: inline-block;
-  background: yellow;
+  background: var(--color-theme-main);
   font-size: 25px;
   padding: 12px 36px;
-  color: #000;
+  color: var(--color-theme-sub);
   margin-top: 20px;
   border-radius: 6px;
-  border: 2px solid yellow;
+  border: 2px solid var(--color-theme-main);
   transition: all 0.3s ease;
 }
 
 #home .home-content a:hover {
-  color: yellow;
+  color: var(--color-theme-main);
   background: none;
 }
 
@@ -155,7 +161,7 @@ section {
   left: 50%;
   width: 180px;
   height: 3px;
-  background: var(--color-black);
+  background: var(--color-theme-sub);
   transform: translateX(-50%);
 }
 
@@ -167,7 +173,7 @@ section {
   padding: 5px;
   font-size: 20px;
   background: var(--color-white);
-  color: yellow;
+  color: var(--color-theme-main);
   transform: translateX(-50%);
 }
 
@@ -199,7 +205,7 @@ section {
   margin-bottom: 10px;
 }
 #about .about-content .right .text span {
-  color: yellow;
+  color: var(--color-theme-main);
 }
 
 #about .about-content .right p {
@@ -208,19 +214,19 @@ section {
 
 #about .about-content .right a {
   display: inline-block;
-  background: yellow;
+  background: var(--color-theme-main);
   font-size: 20px;
   font-weight: 500;
   padding: 10px 30px;
-  color: #000;
+  color: var(--color-theme-sub);
   margin-top: 20px;
   border-radius: 6px;
-  border: 2px solid yellow;
+  border: 2px solid var(--color-theme-main);
   transition: all 0.3s ease;
 }
 
 #about .about-content .right a:hover {
-  color: yellow;
+  color: var(--color-theme-main);
   background: none;
 }
 
@@ -263,7 +269,7 @@ section {
     width: 100%;
     left: -100%;
     top: 0;
-    background: black;
+    background: var(--color-theme-sub);
     text-align: center;
     padding-top: 80px;
     transition: all 0.5s ease;
