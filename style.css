@@ -137,15 +137,12 @@ footer {
   background: none;
 }
 
-/* about section */
+/* all section common */
 section {
   padding: 100px 0;
 }
-#about {
-  font-family: "Poppins", sans-serif;
-}
 
-#about .title {
+section .title {
   position: relative;
   font-family: "Ubuntu", sans-serif;
   font-size: 40px;
@@ -154,7 +151,7 @@ section {
   padding-bottom: 20px;
 }
 
-#about .title::before {
+section .title::before {
   content: "";
   position: absolute;
   bottom: 0px;
@@ -165,8 +162,7 @@ section {
   transform: translateX(-50%);
 }
 
-#about .title::after {
-  content: "who i am";
+section .title::after {
   position: absolute;
   bottom: -12px;
   left: 50%;
@@ -177,7 +173,18 @@ section {
   transform: translateX(-50%);
 }
 
-#about .about-content {
+/* about section */
+
+#about,
+#service {
+  font-family: "Poppins", sans-serif;
+}
+
+#about .title::after {
+  content: "who i am";
+}
+#about .about-content,
+#service .service-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -239,11 +246,70 @@ section {
   height: 300px;
 }
 
+/* service section */
+
+#service {
+  background-color: var(--color-theme-sub);
+  color: var(--color-white);
+}
+
+#service .title::before {
+  background-color: var(--color-white);
+}
+
+#service .title::after {
+  content: "what i provide";
+  background-color: var(--color-theme-sub);
+  color: var(--color-theme-main);
+}
+
+#service .service-content .card {
+  width: calc(33% - 20px);
+  background: #222;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  cursor: pointer;
+}
+#service .service-content .card:hover {
+  background-color: var(--color-theme-main);
+}
+
+#service .service-content .card .box {
+  transition: all 0.3s ease;
+}
+
+#service .service-content .card:hover .box {
+  transform: scale(1.05);
+}
+
+#service .service-content .card i {
+  font-size: 50px;
+  color: var(--color-theme-main);
+  transition: color 0.3s ease;
+}
+#service .service-content .card:hover i {
+  color: var(--color-white);
+}
+
+#service .service-content .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px;
+}
+
 /* responsive media query start  */
 
-@media screen and (max-width: 1104px) {
+@media screen and (max-width: 1300px) {
   #home .max-width {
     margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 1104px) {
+  #about .about-content .left img {
+    height: 350px;
+    width: 350px;
   }
 }
 
@@ -300,6 +366,29 @@ section {
     font-size: 23px;
     padding: 10px 30px;
   }
+
+  .max-width {
+    max-width: 800px;
+  }
+
+  #about .about-content .column {
+    width: 100%;
+  }
+
+  #about .about-content .column.left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+
+  #about .about-content .column.right {
+    flex: 100%;
+  }
+
+  #service .service-content .card {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 690px) {
@@ -318,6 +407,10 @@ section {
   #home .home-content a {
     font-size: 20px;
     padding: 9px 25px;
+  }
+
+  #service .service-content .card {
+    width: 100%;
   }
 }
 
