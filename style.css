@@ -173,22 +173,25 @@ section .title::after {
   transform: translateX(-50%);
 }
 
-/* about section */
-
 #about,
-#service {
+#service,
+#skills {
   font-family: "Poppins", sans-serif;
 }
 
-#about .title::after {
-  content: "who i am";
-}
 #about .about-content,
-#service .service-content {
+#service .service-content,
+#skills .skills-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+}
+
+/* about section */
+
+#about .title::after {
+  content: "who i am";
 }
 
 #about .about-content .left {
@@ -298,6 +301,103 @@ section .title::after {
   margin: 10px 0 7px;
 }
 
+/* skill section */
+
+#skills .title::after {
+  content: "what i know";
+}
+
+#skills .skills-content .column {
+  width: calc(50% - 30px);
+}
+
+#skills .skills-content .left .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#skills .skills-content .left p {
+  text-align: justify;
+}
+
+#skills .skills-content .left a {
+  display: inline-block;
+  background: var(--color-theme-main);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 16px;
+  color: var(--color-theme-sub);
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid var(--color-theme-main);
+  transition: all 0.3s ease;
+}
+
+#skills .skills-content .left a:hover {
+  color: var(--color-theme-main);
+  background: none;
+}
+
+#skills .skills-content .right .bars {
+  margin-bottom: 15px;
+}
+
+#skills .skills-content .right .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+#skills .skills-content .right span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#skills .skills-content .right .line {
+  height: 5px;
+  width: 100%;
+  background: lightgrey;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+}
+
+#skills .skills-content .right .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  left: 0;
+  top: 0%;
+  background: var(--color-theme-main);
+}
+
+#skills .skills-content .right .html::before {
+  width: 40%;
+}
+
+#skills .skills-content .right .css::before {
+  width: 60%;
+}
+
+#skills .skills-content .right .js::before {
+  width: 100%;
+}
+
+#skills .skills-content .right .vue::before {
+  width: 90%;
+}
+
+#skills .skills-content .right .spring::before {
+  width: 60%;
+}
+
+#skills .skills-content .right .mysql::before {
+  width: 30%;
+}
+
 /* responsive media query start  */
 
 @media screen and (max-width: 1300px) {
@@ -388,6 +488,11 @@ section .title::after {
   #service .service-content .card {
     width: calc(50% - 10px);
     margin-bottom: 20px;
+  }
+
+  #skills .skills-content .column {
+    width: 100%;
+    margin-bottom: 24x;
   }
 }
 
