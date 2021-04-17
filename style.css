@@ -175,7 +175,8 @@ section .title::after {
 
 #about,
 #service,
-#skills {
+#skills,
+#teams {
   font-family: "Poppins", sans-serif;
 }
 
@@ -251,15 +252,18 @@ section .title::after {
 
 /* service section */
 
-#service {
+#service,
+#teams {
   background-color: var(--color-theme-sub);
   color: var(--color-white);
 }
 
-#service .title::before {
+#service .title::before,
+#teams .title::before {
   background-color: var(--color-white);
 }
 
+#teams .title::after,
 #service .title::after {
   content: "what i provide";
   background-color: var(--color-theme-sub);
@@ -396,6 +400,79 @@ section .title::after {
 
 #skills .skills-content .right .mysql::before {
   width: 30%;
+}
+
+/* teams section */
+
+#teams .title:after {
+  content: "who with me";
+}
+
+#teams .carousel .card {
+  background-color: var(--color-black);
+  padding: 25px 35px;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+#teams .carousel .card:hover {
+  background: var(--color-theme-main);
+}
+
+#teams .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+#teams .carousel .card:hover .box {
+  transform: scale(1.05);
+}
+
+#teams .carousel .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+#teams .carousel .card img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--color-theme-main);
+}
+
+#teams .carousel .card:hover img {
+  border-color: var(--color-white);
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  outline: none !important;
+  border-radius: 50%;
+  margin: 0 5px;
+  border: 2px solid var(--color-theme-main) !important;
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+  background: var(--color-theme-main) !important;
 }
 
 /* responsive media query start  */
