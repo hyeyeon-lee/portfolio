@@ -30,6 +30,21 @@ function toggleMenu(e) {
   menuIcon.classList.toggle("active");
 }
 
+/* typing animation script */
+const typed = new Typed(".typing", {
+  strings: ["Youtuber", "Developer", "Designer", "Blogger"],
+  typeSpeed: 100,
+  backSpeed: 60,
+  loop: true,
+});
+
+const typed2 = new Typed(".typing-2", {
+  strings: ["Youtuber", "Developer", "Designer", "Blogger"],
+  typeSpeed: 100,
+  backSpeed: 60,
+  loop: true,
+});
+
 /* carousel script */
 $(".carousel").owlCarousel({
   margin: 20,
